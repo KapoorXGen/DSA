@@ -5,7 +5,7 @@
 
 | Difficulty | Problems Solved |
 |------------|------------------|
-| Easy       | 0                |
+| Easy       | 2                |
 | Medium     | 2                |
 | Hard       | 0                |
 
