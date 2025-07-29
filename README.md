@@ -11,6 +11,7 @@
 
 > 🔄 *This count will increase regularly as I keep solving more problems.*
 
+> Total Problems Solved : 9
 ---
 
 ## 🛠️ Key Features
