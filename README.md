@@ -6,7 +6,7 @@
 | Difficulty | Problems Solved |
 |------------|------------------|
 | Easy       | 5                |
-| Medium     | 3                |
+| Medium     | 4                |
 | Hard       | 0                |
 
 > 🔄 *This count will increase regularly as I keep solving more problems.*
