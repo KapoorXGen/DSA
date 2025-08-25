@@ -7,7 +7,7 @@
 |------------|------------------|
 | Easy       | 8                |
 | Medium     | 14               |
-| Hard       | 0                |
+| Hard       | 1                |
 
 ## Total Problems Solved : 22 ##
 
