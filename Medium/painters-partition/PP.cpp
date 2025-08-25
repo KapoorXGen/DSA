@@ -1,58 +1,47 @@
 #include <iostream>
 #include <vector>
+#
 using namespace std;
 
-bool isValidAllocation(vector<int>& boardLengths, int totalBoards, int totalPainters, int maxAllowedWorkload) {
-    int painterCount = 1;          // Number of painters assigned
-    int currentWorkload = 0;       // Workload for the current painter
+bool isValid(vector<int>& arr, int n, int p, int mid) {
+    int painterCount = 1;
+    int currLength = 0;
 
-    for (int i = 0; i < totalBoards; i++) {
-        if (boardLengths[i] > maxAllowedWorkload) return false;
-
-        if (currentWorkload + boardLengths[i] <= maxAllowedWorkload) {
-            // Assign current board to the same painter
-            currentWorkload += boardLengths[i];
-        } else {
-            // Assign board to the next painter
+    for (int i = 0; i < n; i++) {
+        if (currLength + arr[i] > mid) {
             painterCount++;
-            currentWorkload = boardLengths[i];
-            if (painterCount > totalPainters) return false;
+            currLength = arr[i];
+            if (painterCount > p) return false;
+        } else {
+            currLength += arr[i];
         }
     }
-    return true;
+    return painterCount > p ? false : true;
 }
 
-int findMinimumTime(vector<int>& boardLengths, int totalBoards, int totalPainters) {
-    if (totalBoards == 0 || totalPainters == 0 || totalBoards < totalPainters) return -1;
-
-    int bestWorkload = -1;
-
-    // Search space boundaries
-    int minPossibleWorkload = 0, maxPossibleWorkload = 0;
-    for (int i = 0; i < totalBoards; i++) {
-        minPossibleWorkload = max(minPossibleWorkload, boardLengths[i]); // biggest single board
-        maxPossibleWorkload += boardLengths[i];                          // total length of all boards
+int painterAllocation(vector<int>& arr, int n, int p) {
+    int start = 0, end = 0;
+    for (int i = 0; i < n; i++) {
+        if (start < arr[i]) start = arr[i];
+        end += arr[i];
     }
 
-    // Binary Search
-    while (minPossibleWorkload <= maxPossibleWorkload) {
-        int candidateWorkload = minPossibleWorkload + (maxPossibleWorkload - minPossibleWorkload) / 2;
-
-        if (isValidAllocation(boardLengths, totalBoards, totalPainters, candidateWorkload)) {
-            bestWorkload = candidateWorkload;
-            maxPossibleWorkload = candidateWorkload - 1;
+    int ans = -1;
+    while (start <= end) {
+        int mid = (start + end) / 2;
+        if (isValid(arr, n, p, mid)) {
+            ans = mid;
+            end = mid - 1;
         } else {
-            minPossibleWorkload = candidateWorkload + 1;
+            start = mid + 1;
         }
     }
-    return bestWorkload;
+    return ans;
 }
 
 int main() {
-    vector<int> boardLengths = {40, 30, 10, 20};
-    int totalBoards = boardLengths.size();
-    int totalPainters = 2;
-
-    cout << findMinimumTime(boardLengths, totalBoards, totalPainters) << endl;
+    vector<int> arr = {40, 30, 10, 20};
+    int n = arr.size(), p = 2;
+    cout << painterAllocation(arr, n, p) << endl;
     return 0;
 }
