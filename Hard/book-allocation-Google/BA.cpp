@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-bool isValid(vector<int>& arr, int n, int m, int mxAllowedPages) { // O(n)
+bool isValid(vector<int>& arr, int n, int m, int mxAllowedPages) {  // O(n)
 
     // Initialize
     int studentCount = 1, pageSum = 0;
@@ -22,19 +22,18 @@ bool isValid(vector<int>& arr, int n, int m, int mxAllowedPages) { // O(n)
     return studentCount > m ? false : true;
 }
 
-int allocateBooks(vector<int>& arr, int n, int m) { // O(n log m)
+int sumOfArray(vector<int>& arr, int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) sum += arr[i];
+    return sum;
+}
+
+int allocateBooks(vector<int>& arr, int n, int m) {  // O(n log m)
     // Edge cases
     if (n == 0 || m == 0) return -1;
     if (n < m) return -1;
 
-    // Calculating the sum
-    int sum = 0;
-    for (int i = 0; i < n; i++) {
-        sum += arr[i];
-    }
-
-    // Answer
-    int ans = -1;
+    int sum = sumOfArray(arr, n), ans = -1;
 
     // Binary Search
     int start = 0, end = sum;
@@ -51,7 +50,7 @@ int allocateBooks(vector<int>& arr, int n, int m) { // O(n log m)
     return ans;
 }
 
-int main() { // O(n)
+int main() {  // O(n)
     vector<int> arr = {2, 1, 3, 4};
     int n = arr.size(), m = 2;
 
