@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#
 using namespace std;
 
 bool isValid(vector<int>& arr, int n, int p, int mid) {
