@@ -43,5 +43,7 @@
 
 ## 📬 Connect with Me
 
+instagram: https://www.instagram.com/its_om92/
+
 Feel free to follow the repo to get updates.  
 If you're on the same journey, let’s connect and grow together 🚀  
