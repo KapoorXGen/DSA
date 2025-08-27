@@ -1,22 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    int n;
-    cout << "Enter a number: ";
-    cin >> n;
+bool isPalindrome(int x) {
+    if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+    if (x >= 0 || x < 10) return true;
 
-    if (n < 0 || (n % 10 == 0 && n != 0)) cout << "Not a Palindrome";
-    if (n < 10) cout << "Palindrome";
-
-    int reversed = 0;
-    while (n > reversed)
-    {
-        reversed = reversed * 10 + (n % 10);
-        n /= 10;
+    int rev = 0;
+    while (x > rev) {
+        rev = rev * 10 + (x % 10);
+        x /= 10;
     }
+    return x == rev || x == rev / 10;
+}
 
-    n == reversed || n == reversed / 10 ? cout << "Palindrome" : cout << "Not a Palindrome";
+int main() {
+    isPalindrome(121) ? cout << "Palindrome" : cout << "Not a Palindrome";
+    cout << endl;
+    isPalindrome(-121) ? cout << "Palindrome" : cout << "Not a Palindrome";
+    cout << endl;
+    isPalindrome(1) ? cout << "Palindrome" : cout << "Not a Palindrome";
+    cout << endl;
+    isPalindrome(123) ? cout << "Palindrome" : cout << "Not a Palindrome";
     return 0;
 }
