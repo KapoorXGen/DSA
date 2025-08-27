@@ -24,9 +24,8 @@ int mySqrt(int x) {
 }
 
 int main() {
-    int x;
-    cout << "Enter a number: ";
-    cin >> x;
-    cout << "Square root of " << x << " is " << mySqrt(x) << endl;
+    cout << mySqrt(16) << endl;
+    cout << mySqrt(8) << endl;
+    cout << mySqrt(3) << endl;
     return 0;
 }
