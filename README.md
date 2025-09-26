@@ -21,7 +21,7 @@
 - Clean and readable code with comments
 - Solutions from platforms like LeetCode, GeeksforGeeks, CodeStudio, etc.
 - Regular updates with new problems and better optimized versions
-- Language used: **C++ (primary)**, may include Python/JS later
+- Language used: **C++ (primary)**, may include Java/Python later
 
 ---
 
