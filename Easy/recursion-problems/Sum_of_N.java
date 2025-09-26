@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Sum_of_N {
 
@@ -10,10 +9,6 @@ public class Sum_of_N {
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number: ");
-        int n = input.nextInt();
-
-        System.out.print("Sum of " + n + " is " + fun(n));
+        System.out.print("Sum of " + 5 + " is " + fun(5));
     }
 }
