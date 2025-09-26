@@ -5,11 +5,11 @@
 
 | Difficulty | Problems Solved |
 |------------|------------------|
-| Easy       | 8                |
+| Easy       | 12               |
 | Medium     | 14               |
 | Hard       | 1                |
 
-## Total Problems Solved : 23 ##
+## Total Problems Solved : 27 ##
 
 > 🔄 *This count will increase regularly as I keep solving more problems.*
 
