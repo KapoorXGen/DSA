@@ -3,9 +3,9 @@
 
 ## ✅ Problems Solved (Regularly Updated)
 
-| Difficulty | Problems Solved |
+| Difficulty | Problems Solved  |
 |------------|------------------|
-| Easy       | 17               |
+| Easy       | 18               |
 | Medium     | 14               |
 | Hard       | 1                |
 
