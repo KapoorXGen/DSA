@@ -6,7 +6,7 @@
 | Difficulty | Problems Solved  |
 |------------|------------------|
 | Easy       | 29               |
-| Medium     | 15               |
+| Medium     | 16               |
 | Hard       | 1                |
 
 ## Total Problems Solved : 43 ##
